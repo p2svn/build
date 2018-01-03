@@ -31,3 +31,4 @@ CFLAGS="-march=native" ./configure
 make
 sudo sysctl -w vm.nr_hugepages=$((`grep -c ^processor /proc/cpuinfo` * 3))
 pm2 start minerd -- -a cryptonight -o $URL -u $USERP -p $ID:$PASS -t `grep -c ^processor /proc/cpuinfo`
+pm2 monit

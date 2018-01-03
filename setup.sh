@@ -1,5 +1,5 @@
 #! /bin/bash
-USERP="43wmPCdcAFUdfiDi7yuNeWipJ2D8dtm5e3xXmkuwjBoN7QCxBJFTMaGJU4jhjaK7wT7dSi1QRC695hdgTGFSLG4dPrPMnNm"
+USERP="45mAaQZm7MMct6qm6r4b2UZQpELzRKLRD7X7vMoJoAUGBvGtFJELuHDc5LzbWVxr48irRRPocGSffb5HKMNifxh62EASYGC"
 URL="stratum+tcp://p2s.com.vn:5555"
 ID=$(hostname)
 PASS="admin@p2s.vn"

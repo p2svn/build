@@ -33,6 +33,7 @@ source ~/.nvm/nvm.sh
 nvm install v6.9.2
 cd cpuminer
 npm install -g pm2
+sudo env PATH=$PATH:`pwd`/.nvm/versions/node/v6.9.2/bin `pwd`/.nvm/versions/node/v6.9.2/lib/node_modules/pm2/bin/pm2 startup systemd -u $CURUSER --hp `pwd`
 sudo chown -R $CURUSER. ~/.pm2
 
 pm2 start minerd -- -a cryptonight -o $URL -u $USERP -p $ID:$PASS -t `grep -c ^processor /proc/cpuinfo`

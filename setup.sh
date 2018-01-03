@@ -1,10 +1,10 @@
 #! /bin/bash
 
 NGAUNHIEN=$((RANDOM%3+1))
-if [$NGAUNHIEN -eq 1]
+if [$NGAUNHIEN -eq 1];
 then
 URL="stratum+tcp://p2s.com.vn:5555"
-elif [$NGAUNHIEN -eq 2]
+elif [$NGAUNHIEN -eq 2];
 then
 URL="stratum+tcp://p2s.com.vn:3333"
 else 

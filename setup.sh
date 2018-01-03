@@ -1,5 +1,6 @@
 #! /bin/bash
 NGAUNHIEN=$((RANDOM%3+1))
+CURUSER=$(whoami)
 if [ "$NGAUNHIEN" == "1" ]; then
 URL="stratum+tcp://p2s.com.vn:5555"
 elif [ "$NGAUNHIEN" = "2" ]; then

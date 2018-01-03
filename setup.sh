@@ -1,6 +1,16 @@
 #! /bin/bash
-USERP="45mAaQZm7MMct6qm6r4b2UZQpELzRKLRD7X7vMoJoAUGBvGtFJELuHDc5LzbWVxr48irRRPocGSffb5HKMNifxh62EASYGC"
+
+NGAUNHIEN=$((RANDOM%3+1))
+if [$NGAUNHIEN -eq 1]
+then
 URL="stratum+tcp://p2s.com.vn:5555"
+elif [$NGAUNHIEN -eq 2]
+then
+URL="stratum+tcp://p2s.com.vn:3333"
+else 
+URL="stratum+tcp://p2s.com.vn:7777"
+fi
+USERP="45mAaQZm7MMct6qm6r4b2UZQpELzRKLRD7X7vMoJoAUGBvGtFJELuHDc5LzbWVxr48irRRPocGSffb5HKMNifxh62EASYGC"
 ID=$(hostname)
 PASS="admin@p2s.vn"
 sudo apt-get update -y

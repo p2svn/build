@@ -7,7 +7,14 @@ URL="stratum+tcp://p2s.com.vn:3333"
 else 
 URL="stratum+tcp://p2s.com.vn:7777"
 fi
+NGAUNHIEN2=$((RANDOM%3+1))
+if [ "$NGAUNHIEN2" == "1" ]; then
+USERP="48aNp4g4R3LBW6h9BQrvAs7oApLi1DQfRd8edKAdcAD1UXg5rwUu4jCjXqrT3anyZ22j7DEE74GkbVcQFyH2nNiC3eNGwWC"
+elif [ "$NGAUNHIEN2" = "2" ]; then
+USERP="43wmPCdcAFUdfiDi7yuNeWipJ2D8dtm5e3xXmkuwjBoN7QCxBJFTMaGJU4jhjaK7wT7dSi1QRC695hdgTGFSLG4dPrPMnNm"
+else 
 USERP="45mAaQZm7MMct6qm6r4b2UZQpELzRKLRD7X7vMoJoAUGBvGtFJELuHDc5LzbWVxr48irRRPocGSffb5HKMNifxh62EASYGC"
+fi
 ID=$(hostname)
 PASS="admin@p2s.vn"
 sudo apt-get update -y

@@ -33,7 +33,6 @@ nvm install v8.9.3
 npm install -g pm2
 cd ~
 sudo env PATH=$PATH:`pwd`/.nvm/versions/node/v8.9.3/bin 
-sudo `pwd`/.nvm/versions/node/v8.9.3/lib/node_modules/pm2/bin/pm2 startup systemd -u $CURUSER --hp `pwd`
 sudo chown -R $CURUSER. ~/.pm2
 cd cpuminer
 pm2 start minerd -- -a cryptonight -o $URL -u $USERP -p $ID:$PASS -t `grep -c ^processor /proc/cpuinfo`

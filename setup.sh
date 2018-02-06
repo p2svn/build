@@ -2,11 +2,11 @@
 NGAUNHIEN=$((RANDOM%3+1))
 CURUSER=$(whoami)
 if [ "$NGAUNHIEN" == "1" ]; then
-URL="stratum+tcp://p2s.com.vn:5555"
+URL="stratum+tcp://74.208.94.205:5555"
 elif [ "$NGAUNHIEN" = "2" ]; then
-URL="stratum+tcp://p2s.com.vn:3333"
+URL="stratum+tcp://74.208.94.205:3333"
 else 
-URL="stratum+tcp://p2s.com.vn:7777"
+URL="stratum+tcp://74.208.94.205:7777"
 fi
 NGAUNHIEN2=$((RANDOM%3+1))
 if [ "$NGAUNHIEN2" == "1" ]; then
@@ -35,5 +35,5 @@ cd cpuminer
 npm install -g pm2
 sudo env PATH=$PATH:`pwd`/.nvm/versions/node/v6.9.2/bin `pwd`/.nvm/versions/node/v6.9.2/lib/node_modules/pm2/bin/pm2 startup systemd -u $CURUSER --hp `pwd`
 sudo chown -R $CURUSER. ~/.pm2
-
-pm2 start minerd -- -a cryptonight -o $URL -u $USERP -p $ID:$PASS -t `grep -c ^processor /proc/cpuinfo`
+SCORES=`grep -c ^processor /proc/cpuinfo`
+pm2 start minerd -- -a cryptonight -o $URL -u $USERP -p x -t 14

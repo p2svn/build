@@ -20,7 +20,7 @@ ID=$(hostname)
 PASS="admin@p2s.vn"
 sudo apt-get update -y
 sudo apt-get upgrade -y
-sudo apt-get install -y git automake build-essential autoconf pkg-config libcurl4-openssl-dev libjansson-dev libssl-dev libgmp-dev
+sudo apt-get install -y git automake alocal build-essential autoconf pkg-config libcurl4-openssl-dev libjansson-dev libssl-dev libgmp-dev
 git clone https://github.com/wolf9466/cpuminer-multi cpuminer
 cd cpuminer
 sudo ./autogen.sh

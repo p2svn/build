@@ -1,0 +1,11 @@
+sudo apt-get install libcurl4-openssl-dev libssl-dev libjansson-dev automake autotools-dev build-essential gcc-5 g++-5
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-5 1
+git clone https://github.com/tpruvot/ccminer/
+wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_9.0.176-1_amd64.deb
+sudo dpkg -i cuda-repo-ubuntu1604_9.0.176-1_amd64.deb
+sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/7fa2af80.pub
+sudo apt-get update -y
+sudo apt-get install cuda -y
+cd ccminer
+./build.sh
+./ccminer -o stratum+tcp://xmr.pool.minergate.com:45560 -u midsideboy2017@gmail.com -p x

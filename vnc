@@ -1,0 +1,2 @@
+sudo apt-get install ubuntu-desktop gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal -y
+sudo apt-get install vnc4server -y
